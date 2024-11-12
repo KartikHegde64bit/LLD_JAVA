@@ -11,22 +11,22 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Long getUserId() {
+    public Long getUserId(String role) {
         return userId;
     }
 
     @Override 
-    public String getUserName() {
+    public String getUserName(String role) {
         return userName;
     }
 
     @Override
-    public void setUserId(Long userId) {
+    public void setUserId(Long userId, String role) {
         this.userId = userId;
     }
 
     @Override
-    public void setUserName(String userName) {
+    public void setUserName(String userName, String role) {
         this.userName = userName;
     }
 }

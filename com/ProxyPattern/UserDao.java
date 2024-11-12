@@ -2,11 +2,11 @@ package com.ProxyPattern;
 
 public interface UserDao {
 
-    void setUserId(Long userId);
+    void setUserId(Long userId, String role) throws Exception;
 
-    void setUserName(String userName);
+    void setUserName(String userName, String role) throws Exception;
     
-    Long getUserId();
+    Long getUserId(String role) throws Exception;
 
-    String getUserName();
+    String getUserName(String role) throws Exception;
 }
