@@ -1,6 +1,10 @@
 
 import com.ProxyPattern.UserDao;
 
+/**
+ * This is a Proxy Layer which is performing the role of Access Restriction on UserDao object
+ * Other types of Proxies such as Pre and Post processors are also used in Industries
+ */
 public class UserDaoProxy implements UserDao {
     private UserDao userDao;
 

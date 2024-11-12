@@ -1,0 +1,13 @@
+Proxy Pattern are helpful for no of reasons
+
+Typically they have
+1. Client
+2. Proxy Layer
+3. Server / Data Access
+
+Client <================> Proxy Layer <=============> Server
+
+ex: 
+pre-process payload or request sent to the Server
+post-process payload or response to the Client
+use as a filter for access restrictions like the one used in this class files
