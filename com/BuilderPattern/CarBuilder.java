@@ -5,6 +5,7 @@ import java.util.List;
 import com.spring.systemdesign.builderpattern.components.components.Accessories;
 import com.spring.systemdesign.builderpattern.components.components.Engine;
 import com.spring.systemdesign.builderpattern.components.components.Wheels;
+import com.spring.systemdesign.builderpattern.components.components.validator.EngineType;
 
 public interface CarBuilder {
 
@@ -17,6 +18,8 @@ public interface CarBuilder {
     CarBuilder setTransmissionType(String transmissionType);
 
     CarBuilder setAccessories(List<Accessories> accessories);
+
+    CarBuilder setEngineType(EngineType engineType);
 
     Car build();
 }

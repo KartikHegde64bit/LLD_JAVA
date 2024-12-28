@@ -4,6 +4,8 @@ import java.util.List;
 import com.spring.systemdesign.builderpattern.components.components.Accessories;
 import com.spring.systemdesign.builderpattern.components.components.Engine;
 import com.spring.systemdesign.builderpattern.components.components.Wheels;
+import com.spring.systemdesign.builderpattern.components.components.validator.CarValidator;
+import com.spring.systemdesign.builderpattern.components.components.validator.EngineType;
 
 public class CarBuilderImpl implements CarBuilder {
     private Engine engine;
@@ -11,11 +13,17 @@ public class CarBuilderImpl implements CarBuilder {
     private String paintColor;
     private String transmissionType;
     private List<Accessories> accessories;
+    private EngineType engineType;
 
     @Override
     public CarBuilder setEngine(Engine engine) {
         this.engine = engine;
         return this; // Returning 'this' to enable method chaining
+    }
+
+    public CarBuilder setEngineType(EngineType engineType){
+        this.engineType = engineType;
+        return this;
     }
 
     @Override
@@ -46,7 +54,12 @@ public class CarBuilderImpl implements CarBuilder {
     public Car build() {
         // Construct the Car object using the set values
         Car car = new Car(engine, wheels, paintColor, transmissionType, accessories);
-        CarValidator.validate(car);
+        try{
+            CarValidator.validate(car, engineType);
+        }catch(Exception e){
+            System.out.println("Exception occurred:" + e);
+            return null;
+        }
         return car;
     }
 
