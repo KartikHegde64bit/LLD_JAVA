@@ -1,6 +1,6 @@
+package com.spring.systemdesign.NullObjectPattern;
 
-
-public class ChartComponentImpl implements ChartComponet {
+public class ChartComponentImpl implements ChartComponent {
     Long componentId;
     String componentName;
 

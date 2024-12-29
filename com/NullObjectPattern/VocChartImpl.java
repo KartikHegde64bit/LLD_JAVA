@@ -1,9 +1,11 @@
-public class VocChartImpl implements ChartComponet {
+package com.spring.systemdesign.NullObjectPattern;
+
+public class VocChartImpl implements ChartComponent {
     Long componentId;
     String componentName;
 
     public Long getComponentId(){
-        return l0;
+        return 0L;
     }
 
     public String getComponentName() {
