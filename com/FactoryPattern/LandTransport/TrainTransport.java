@@ -4,15 +4,10 @@ import com.spring.systemdesign.FactoryPattern.Transport;
 
 public class TrainTransport implements Transport {
 
-    private final String type;
-    private final Integer cost;
-    private final Integer time;
-
-    public TrainTransport(String type, Integer cost, Integer time) {
-        this.type = type;
-        this.cost = cost;
-        this.time = time;
-    }
+    private String type = "TRAIN";
+    private String mode = "LAND";
+    private Integer cost;
+    private Integer time;
 
     public String getType() {
         return type;

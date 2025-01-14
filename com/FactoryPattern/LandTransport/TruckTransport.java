@@ -3,15 +3,10 @@ package com.spring.systemdesign.FactoryPattern.LandTransport;
 import com.spring.systemdesign.FactoryPattern.Transport;
 
 public class TruckTransport implements Transport {
-    private final String type;
-    private final Integer cost;
-    private final Integer time;
-
-    public TruckTransport(String type, Integer cost, Integer time) {
-        this.type = type;
-        this.cost = cost;
-        this.time = time;
-    }
+    private String type = "TRUCK";
+    private String mode = "LAND";
+    private Integer cost;
+    private Integer time;
 
     public String getType() {
         return type;

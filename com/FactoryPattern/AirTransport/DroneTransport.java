@@ -3,15 +3,11 @@ package com.spring.systemdesign.FactoryPattern.AirTransport;
 import com.spring.systemdesign.FactoryPattern.Transport;
 
 public class DroneTransport implements Transport {
-    private final String type;
-    private final Integer cost;
-    private final Integer time;
+    private String type = "DRONE";
+    private String mode = "AIR";
+    private Integer cost;
+    private Integer time;
 
-    public DroneTransport(String type, Integer cost, Integer time) {
-        this.type = type;
-        this.cost = cost;
-        this.time = time;
-    }
 
     public String getType() {
         return type;

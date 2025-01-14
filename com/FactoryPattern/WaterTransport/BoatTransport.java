@@ -3,15 +3,10 @@ package com.spring.systemdesign.FactoryPattern.WaterTransport;
 import com.spring.systemdesign.FactoryPattern.Transport;
 
 public class BoatTransport implements Transport {
-    private final String type = "BOAT";
-    private final String mode = "WATER";
-    private final Integer cost;
-    private final Integer time;
-
-    public BoatTransport(Integer cost, Integer time) {
-        this.cost = cost;
-        this.time = time;
-    }
+    private String type = "BOAT";
+    private String mode = "WATER";
+    private Integer cost;
+    private Integer time;
 
     public String getType() {
         return type;
