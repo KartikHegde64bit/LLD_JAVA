@@ -1,4 +1,4 @@
-package com.spring.systemdesign.builderpattern.components.components.validator;
+package com.spring.systemdesign.BuilderPattern.components.components.validator;
 
 import java.util.List;
 

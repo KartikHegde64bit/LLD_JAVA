@@ -1,9 +1,9 @@
-package com.spring.systemdesign.builderpattern;
+package com.spring.systemdesign.BuilderPattern;
 
 import java.util.List;
-import com.spring.systemdesign.builderpattern.components.components.Accessories;
-import com.spring.systemdesign.builderpattern.components.components.Engine;
-import com.spring.systemdesign.builderpattern.components.components.Wheels;
+import com.spring.systemdesign.BuilderPattern.components.components.Accessories;
+import com.spring.systemdesign.BuilderPattern.components.components.Engine;
+import com.spring.systemdesign.BuilderPattern.components.components.Wheels;
 
 public class Car {
     private final Engine engine;

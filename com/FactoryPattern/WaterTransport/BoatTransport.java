@@ -19,4 +19,9 @@ public class BoatTransport implements Transport {
     public Integer getCost(){
         return cost;
     }
+
+    @Override
+    public String toString(){
+        return "Mode: {" + this.mode + "}" + " Type{ " + this.type + " }";
+    }
 }

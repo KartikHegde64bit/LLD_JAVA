@@ -1,8 +1,10 @@
-package com.spring.systemdesign.builderpattern;
+package com.spring.systemdesign.BuilderPattern;
 
-import com.spring.systemdesign.builderpattern.components.components.Engine;
-import com.spring.systemdesign.builderpattern.components.components.Wheels;
-import com.spring.systemdesign.builderpattern.components.components.validator.EngineType;
+import com.spring.systemdesign.BuilderPattern.components.components.Engine;
+import com.spring.systemdesign.BuilderPattern.components.components.Wheels;
+import com.spring.systemdesign.BuilderPattern.components.components.validator.EngineType;
+import com.spring.systemdesign.BuilderPattern.CarBuilder;
+import com.spring.systemdesign.BuilderPattern.Car;
 
 public class CarDirector {
     public Car constructSedan(CarBuilder builder) {

@@ -1,10 +1,10 @@
-package com.spring.systemdesign.builderpattern;
+package com.spring.systemdesign.BuilderPattern;
 
 public class Application {
     public static void main(String[] args) {
         CarDirector director = new CarDirector();
         CarBuilder builder = new CarBuilderImpl();
-        Car car = (Car) director.constructSedan(builder);
+        Car car = director.constructSedan(builder);
         System.out.println(car.toString());
     }
 }

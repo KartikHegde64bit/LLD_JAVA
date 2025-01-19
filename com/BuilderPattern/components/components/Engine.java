@@ -1,4 +1,4 @@
-package com.spring.systemdesign.builderpattern.components.components;
+package com.spring.systemdesign.BuilderPattern.components.components;
 
 public class Engine {
     private String engine;

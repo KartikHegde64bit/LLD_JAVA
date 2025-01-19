@@ -1,6 +1,6 @@
-package com.spring.systemdesign.builderpattern.components.components.validator;
+package com.spring.systemdesign.BuilderPattern.components.components.validator;
 
-import com.spring.systemdesign.builderpattern.Car;
+import com.spring.systemdesign.BuilderPattern.Car;
 
 public class CarValidator {
 
