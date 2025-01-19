@@ -5,6 +5,6 @@ import Uber.TripMetaDetails;
 
 public class DistancePricingStrategy implements PricingStrategy {
     public Double calculatePrice(TripMetaDetails tripMeta){
-        return 0.0;
+        return 200.00;
     }
 }

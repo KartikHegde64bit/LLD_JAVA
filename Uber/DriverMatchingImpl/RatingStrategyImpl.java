@@ -6,6 +6,6 @@ import Uber.UserImpl.Driver;
 
 public class RatingStrategyImpl implements DriverMatchingStrategy {
     public Driver matchDriver(TripMetaDetails tripMeta){
-        return new Driver();
+        return new Driver("RatingDriver");
     }
 }

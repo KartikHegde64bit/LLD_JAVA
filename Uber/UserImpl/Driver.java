@@ -8,6 +8,9 @@ public class Driver implements User {
     private String id;
     private Double rating;
 
+    public Driver (String name){
+        this.name = name;
+    }
 
     @Override
     public String getName(){

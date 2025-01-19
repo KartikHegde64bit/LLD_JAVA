@@ -6,6 +6,6 @@ import Uber.UserImpl.Driver;
 
 public class DistanceStrategyImpl implements DriverMatchingStrategy {
     public Driver matchDriver(TripMetaDetails tripMeta){
-        return new Driver();
+        return new Driver("DistanceDriver");
     }
 }
