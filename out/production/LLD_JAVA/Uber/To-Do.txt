@@ -1,0 +1,4 @@
+1. Update the proper logic in DriverMatchingImpl in both classes
+2. The above for PricingStrategyImpl as well
+3. Maybe we can add calculateDistanceTo method in Location class which will take another location and return the distance
+4. Maybe we can add Location distance calculation strategy as well
