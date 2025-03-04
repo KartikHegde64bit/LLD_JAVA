@@ -1,6 +1,9 @@
 package dtos;
 
 public class Coin {
+    public Coin(Integer value){
+        this.value = value;
+    }
     public Integer getValue() {
         return value;
     }

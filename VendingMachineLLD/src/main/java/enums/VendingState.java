@@ -1,5 +1,5 @@
 package enums;
 
 public enum VendingState {
-    IDLE, HASMONEY, SELECTPRODUCT, PAY
+    IDLE, HASMONEYSTATE, SELECTPRODUCTSTATE, PAY
 }

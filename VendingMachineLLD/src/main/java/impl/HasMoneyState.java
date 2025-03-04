@@ -1,13 +1,14 @@
 package impl;
 
 import dtos.Coin;
+import dtos.Item;
 import dtos.VendingMachine;
 import enums.VendingState;
 
 import java.util.List;
 
 public class HasMoneyState implements MachineState{
-        public void insertCoin(VendingMachine vendingMachine, List<Coin> coins) throws Exception{
+        public void insertCoin(VendingMachine vendingMachine, List<Coin> coins){
             // add the coins to balance
             for(Coin coin: coins) {
                 vendingMachine.setBalanceAmount(coin.getValue() + vendingMachine.getBalanceAmount());
@@ -15,24 +16,30 @@ public class HasMoneyState implements MachineState{
         }
 
         // for selecting a product
-        public void selectProduct (VendingMachine vendingMachine, int productId) throws Exception{
-            vendingMachine.setVendingState(VendingState.SELECTPRODUCT);
+        public void selectProduct (VendingMachine vendingMachine, Item item){
+            //vendingMachine.setVendingState(VendingState.SELECTPRODUCT);
+            vendingMachine.setState(new SelectProductState());
         }
 
         // for payment
-        public void pay(VendingMachine vendingMachine) throws Exception{
-            throw new Exception("No product selected");
+        public void pay(VendingMachine vendingMachine){
+            System.out.println("No product selected");
         }
 
         // for cancelling the product
-        public void cancelProduct(VendingMachine vendingMachine, Integer productId) throws Exception{
-            throw new Exception("No product selected to cancel");
+        public void cancelProduct(VendingMachine vendingMachine, Item item){
+            System.out.println("No product selected to cancel");
         }
 
-        public void cancelTransaction(VendingMachine vendingMachine) throws Exception{
+        public void cancelTransaction(VendingMachine vendingMachine){
             //updateState(vendingMachine, VendingState.IDLE);
-            vendingMachine.setVendingState(VendingState.IDLE);
+            //vendingMachine.setVendingState(VendingState.SELECTPRODUCT);
+            vendingMachine.setState(new IdleState());
             vendingMachine.refundAmount();
+        }
+
+        public void dispenseProduct(VendingMachine vendingMachine){
+            System.out.println("Can't dispense item");
         }
 
 //        public void refundAmount(VendingMachine vendingMachine){
