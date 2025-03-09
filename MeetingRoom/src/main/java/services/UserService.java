@@ -8,6 +8,8 @@ import java.util.UUID;
 public class UserService {
     public UUID createUser(String userName){
         User newUser = new User(userName);
+        System.out.println("User Created: " + userName);
+        MemoryRepository.addUser(newUser);
         return newUser.getUserId();
     }
 

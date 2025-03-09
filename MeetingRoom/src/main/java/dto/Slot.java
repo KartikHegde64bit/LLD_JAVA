@@ -1,12 +1,12 @@
 package dto;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Slot {
-    Integer slotNumber;
-    Date startTime;
-    Date endTime;
-    boolean isBooked;
+    private Integer slotNumber;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
+    private boolean isBooked;
 
     public boolean isBooked() {
         return isBooked;
@@ -16,19 +16,19 @@ public class Slot {
         isBooked = booked;
     }
 
-    public Date getEndTime() {
+    public LocalDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
 
-    public Date getStartTime() {
+    public LocalDateTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
     }
 
@@ -40,4 +40,12 @@ public class Slot {
         this.slotNumber = slotNumber;
     }
 
+    @Override
+    public String toString(){
+        return "SlotInfo: {" +
+                "StartTime: " + this.startTime + " " +
+                "EndTime: " + this.endTime + "}" + " " +
+                "Is Booked: " + this.isBooked() + " ";
+
+    }
 }

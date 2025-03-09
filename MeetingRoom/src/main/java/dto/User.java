@@ -24,5 +24,8 @@ public class User {
         this.userName = userName;
     }
 
-
+    @Override
+    public String toString(){
+        return "Username: " + this.getUserName() + " ";
+    }
 }

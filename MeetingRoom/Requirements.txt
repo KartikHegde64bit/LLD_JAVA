@@ -1,0 +1,5 @@
+Functional Requirements in this
+
+1. User should be able to login / sign up
+2. User should be able to book the meeting room for a time period, for a particular capacity
+3. User should be able to cancel the booked time slot
