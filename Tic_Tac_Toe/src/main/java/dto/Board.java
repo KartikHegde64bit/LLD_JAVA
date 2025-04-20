@@ -6,11 +6,19 @@ public class Board {
     private final int dimension = 3;
     private char[][] board;
     private BoardStatus boardStatus;
+    private User currentUser = null;
+
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
+    }
 
     public Board() {
         this.board = new char[dimension][dimension];
         this.boardStatus = BoardStatus.FREE;
-
         // Initialize with empty values
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
